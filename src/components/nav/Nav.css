@@ -23,6 +23,6 @@ nav a {
 }
 
 nav a.active {
-    background: var(--bg);
+    background: var(--background);
     color: var(--color-white);
 }

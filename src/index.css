@@ -16,14 +16,29 @@
 /* Defining all variables */
 
 :root {
-    --bg: #2a2c41;
+    --background: var(--lt-color-gray-100) !important;
     --bg-secondary: rgba(32, 35, 62, 0.3);
     --color-primary: #0C7489;
     --color-secondary: rgba(12, 116, 137, .4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, .4);
 
-    --transition: all .4s ease;
+    --transition: all .8s ease;
+
+    --color-gray-100: #f8f9fc;
+    --color-gray-200: #f1f3f9;
+    --color-gray-300: #dee3ed;
+    --color-gray-400: #c2c9d6;
+    --color-gray-500: #8f96a3;
+    --color-gray-600: #5e636e;
+    --color-gray-700: #2f3237;
+    --color-gray-800: #1d1e20;
+    --color-gray-900: #111213;
+
+
+    --color-text-default:  var(--lt-color-gray-700) !important;
+
+    --color-hover: var(--color-primary);
 
     --container-w-lg: 75%;
     --container-w-md: 86%; 
@@ -40,8 +55,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: var(--color-white);
+    background: var(--background);
+    color: var(--color-text-default);
     line-height: 1.7;
 }
 
@@ -90,18 +105,15 @@ a:hover {
 .btn {
     width: max-content;
     display: inline-block;
-    color: var(--color-primary);
+    color: var(--color-text-default);
     padding: .75rem 1.2rem;
     border-radius: .4rem;
     cursor: pointer;
-    border: 1px solid var(--color-primary);
     transition: var(--transition);
 }
 
 .btn:hover {
-    background: var(--color-white);
-    color: var(--bg);
-    border-color: transparent;
+    color: var(--color-hover);
 }
 
 .btn-primary {
