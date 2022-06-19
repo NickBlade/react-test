@@ -1,5 +1,5 @@
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
 
 /* Defining all body */ 
 
@@ -54,7 +54,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Inter, sans-serif;
     background: var(--background);
     color: var(--color-text-default);
     line-height: 1.7;
