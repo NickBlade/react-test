@@ -1,5 +1,4 @@
 import React from 'react'
-import './About.css'
 import ME from '../../assets/me-about.jpg'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
@@ -44,7 +43,6 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tempora, dolor fuga eos incidunt earum impedit optio, doloribus illum eveniet facilis voluptatum officiis, libero a et beatae amet sint pariatur?
             </p>
 
-            <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
       </div>
     </section>

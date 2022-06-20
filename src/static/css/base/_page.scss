@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;    
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: $background;
+    color: $color-text-default;
+    line-height: 1.7;
+}
+
+/* -- Styles -- */
+.container {
+    width: $container-w-lg;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    margin-top: 8rem;
+    height: 100vh;
+
+    > h2, > h5 {
+        text-align: center;
+        color: $color-primary;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    > h2 {
+        color: $color-text-default;
+        margin-bottom: 5rem;
+        font-size: 2.5rem;
+     }
+}
+
+a {
+    color: $color-text-default;
+    transition: $transition;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: $color-text-default;
+    padding: .75rem 1.2rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: $transition;
+    
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =============== RESPONSIVE =============== */
+@media screen and (max-width: 600px) {
+    .container {
+        width: $container-w-sm;
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+}

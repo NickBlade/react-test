@@ -1,7 +1,13 @@
+
 .about-container {
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+
+    @include medium {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
 }
 
 .about-me {
@@ -11,18 +17,28 @@
     background: linear-gradient(
         45deg,
         transparent,
-        var(--color-primary),
+        $color-primary,
         transparent
     );
     display: grid;
     place-items: center;
+
+    @include medium {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    @include small {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
 }
 
 .about-me-img {
     border-radius: 2rem;
     overflow: hidden;
     transform: rotate(10deg);
-    transition: var(--transition);
+    transition: $transition;
 }
 
 .about-me-img:hover {
@@ -33,6 +49,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+
+    @include small {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 }
 
 .about-card {
@@ -44,13 +65,13 @@
 }
 
 .about-card:hover {
-    border-color: var(--color-secondary);
+    border-color: $color-secondary;
     transform: translateY(-5%);
     cursor: default;
 }
 
 .about-icon {
-    color: var(--color-primary);
+    color: $color-primary;
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
@@ -61,48 +82,23 @@
 
 .about-card small {
     font-size: .7rem;
-    color: var(--color-light);
+    color: $color-text-default;
 }
 
-.about-content p {
-    margin: 2rem 0 2.6rem;
-    color: var(--color-light);
-}
-
-/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
-@media screen and (max-width: 1024px) {
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .about-me {
-        width: 50%;
-        margin: 2rem auto 4rem;
-    }
-
-    .about-content p {
-        margin: 1rem 0 1.5rem;
-    }
-}
-
-/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
-@media screen and (max-width: 600px) {
-    .about-me {
-        width: 65%;
-        margin: 0 auto 3rem;
-    }
-
-    .about-cards {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .about-content {
+.about-content {
+    @include small {
         text-align: center;
     }
+}
+.about-content p {
+    margin: 2rem 0 2.6rem;
+    color: $color-text-default;
 
-    .about-content p {
+    @include medium {
+        margin: 1rem 0 1.5rem;
+    }
+
+    @include small {
         margin: 1.5rem 0;
     }
 }
